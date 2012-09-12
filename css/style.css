@@ -2281,6 +2281,9 @@ header #logo h1 {
   padding-top: 10px;
   font-size: 2.5em;
 }
+header #logo h1 span:after{
+  content: ' web shop';
+}
 @media all and (-webkit-min-device-pixel-ratio: 1.5) {
   header #logo {
     background-image: url('../img/logo@2x.png');
@@ -3485,6 +3488,14 @@ a img.aligncenter {
   }
   .four-columns .item {
     height: 200px !important;
+  }
+}
+@media only screen and (max-width: 484px) {
+  #logo {
+    width: 250px !important;
+  }
+  #logo h1 span:after{
+    content: '' !important;
   }
 }
 /* All Mobile Sizes (devices and browser) */
