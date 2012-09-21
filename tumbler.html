@@ -3702,7 +3702,7 @@
                   <li class="clearfix type"><a href="{Permalink}"><i class="icon-file"></i></a></li>
                   <li><strong>Posted:</strong> {ShortMonth} {DayofMonth} {Year}</li>
                   <li><strong>Type:</strong> <a href="#">Article</a></li>
-                  <li><strong>Comments:</strong> <a href="#">5</a></li>
+                  <li><strong>Comments:</strong> <a class="dsq-comment-count" href="{Permalink}#disqus_thread"></a></li>
                 </ul>
               </div>
 
@@ -3728,7 +3728,7 @@
                 <li class="clearfix type"><a href="blog-single.html"><i class="icon-file"></i></a></li>
                 <li><strong>Posted:</strong> {ShortMonth} {DayofMonth} {Year}</li>
                 <li><strong>Type:</strong> <a href="#">Image</a></li>
-                <li><strong>Comments:</strong> <a href="#">5</a></li>
+                <li><strong>Comments:</strong> <a class="dsq-comment-count" href="{Permalink}#disqus_thread"></a></li>
               </ul>
             </div>
 
@@ -3747,7 +3747,7 @@
                 <li class="clearfix type"><a href="blog-single.html"><i class="icon-comment-alt"></i></a></li>
                 <li><strong>Posted:</strong> {ShortMonth} {DayofMonth} {Year}</li>
                 <li><strong>Type:</strong> <a href="#">Quote</a></li>
-                <li><strong>Comments:</strong> <a href="#">2</a></li>
+                <li><strong>Comments:</strong> <a class="dsq-comment-count" href="{Permalink}#disqus_thread"></a></li>
               </ul>
             </div>
 
@@ -3771,7 +3771,7 @@
                 <li class="clearfix type"><a href="blog-single.html"><i class="icon-link"></i></a></li>
                 <li><strong>Posted:</strong> {ShortMonth} {DayofMonth} {Year}</li>
                 <li><strong>Type:</strong> <a href="#">Link</a></li>
-                <li><strong>Comments:</strong> <a href="#">6</a></li>
+                <li><strong>Comments:</strong> <a class="dsq-comment-count" href="{Permalink}#disqus_thread"></a></li>
               </ul>
             </div>
 
@@ -3795,7 +3795,7 @@
                 <li class="clearfix type"><a href="blog-single.html"><i class="icon-film"></i></a></li>
                 <li><strong>Posted:</strong> {ShortMonth} {DayofMonth} {Year}</li>
                 <li><strong>Type:</strong> <a href="#">Video</a></li>
-                <li><strong>Comments:</strong> <a href="#">2</a></li>
+                <li><strong>Comments:</strong> <a class="dsq-comment-count" href="{Permalink}#disqus_thread"></a></li>
               </ul>
             </div>
             <div class="eight columns omega text">
@@ -3807,6 +3807,26 @@
           </article>  
           {/block:Video}
           {/block:Posts}
+          <script type="text/javascript">var disqus_url = "{Permalink}"; var disqus_title ="{block:PostTitle}{PostTitle}{/block:PostTitle}";</script>{block:Permalink}<div id="disqus_thread"></div>
+          <script type="text/javascript">
+            /**
+              * var disqus_identifier; [Optional but recommended: Define a unique identifier (e.g. post id or slug) for this thread] 
+              */
+            (function() {
+             var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+             dsq.src = 'http://blockwebshop.disqus.com/embed.js';
+             (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+            })();
+          </script>
+          <noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript=blockwebshop">comments powered by Disqus.</a></noscript>
+          {/block:Permalink}<script type="text/javascript">
+          var disqus_shortname = 'blockwebshop';
+          (function () {
+            var s = document.createElement('script'); s.async = true;
+            s.src = 'http://blockwebshop.disqus.com/count.js';
+            (document.getElementsByTagName('HEAD')[0] || document.getElementsByTagName('BODY')[0]).appendChild(s);
+          }());
+          </script>
           <div class="pagination">
             <span class="current">1</span>
             <a href="#">2</a>
