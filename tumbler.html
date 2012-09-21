@@ -3828,11 +3828,14 @@
           }());
           </script>
           <div class="pagination">
-            <span class="current">1</span>
-            <a href="#">2</a>
-            <a href="#">3</a>
-            <a href="#">4</a>
-            <a href="#">»</a>
+          {block:Pagination}
+          {block:CurrentPage}
+          <span class="current">{PageNumber}</span>
+          {/block:CurrentPage}
+          {block:JumpPage}
+          <a href="{URL}">{PageNumber}</a>
+          {/block:JumpPage}
+          {/block:Pagination}
           </div> 
         </div><!-- /eleven -->
         <aside class="five columns omega sidebar">
