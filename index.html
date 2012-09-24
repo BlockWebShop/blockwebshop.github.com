@@ -51,16 +51,11 @@
       </div>
 
       <div class="eleven columns">
-      <!--
         <nav class="menu">
           <ul>
-            <li><a href="page.html">Hire us</a> </li>
-            <li><a href="page.html">About us</a> </li>
-            <li><a href="blog.html">Blog</a></li>
-            <li><a href="contact.html">Contact</a></li>
+            <li><a href="http://blog.blockwebshop.com">Blog</a></li>
           </ul>
         </nav>
-      -->
       </div>
     </div>
     
@@ -140,7 +135,7 @@
 
       <div class="one-third column widget list">
         <h3>From the blog:</h3>
-        <ul>
+        <ul id='blog'>
           <li>No posts yet, check back soon.</li>
         </ul>
       </div>
@@ -173,12 +168,20 @@
   <script src="js/plugins.js?v=1"></script>
   <script src="js/script.js"></script>
 
+  <script type="text/javascript" src="http://blog.blockwebshop.com/api/read/json"></script>
+
   <script type="text/javascript">
-  $(document).ready(function(){
+      $(document).ready(function(){
         $('#layerslider').layerSlider({
           skinsPath : 'css/layerslider/',
           skin : 'powerful'
         });
+        if(tumblr_api_read.posts.length > 0) {
+          $('#blog').html('')
+          $.each(tumblr_api_read.posts, function(index, post) {
+            $('#blog').append('<li><a href="' + post.url + '">' + post['regular-title'] + '</a></li>');
+          });
+        }
       });
   </script>
 

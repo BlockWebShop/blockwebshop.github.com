@@ -1380,7 +1380,7 @@
         @font-face {
           font-family: 'FontAwesome';
           src: url('http://blockwebshop.com/css/fonts/fontawesome-webfont.eot');
-          src: url('http://blockwebshop.com/css/fonts/fontawesome-webfont.eot?#iefix') format('embedded-opentype'), url('http://blockwebshop.com/fonts/css/fontawesome-webfont.woff') format('woff'), url('http://blockwebshop.com/css/fonts/fontawesome-webfont.ttf') format('truetype'), url('http://blockwebshop.com/css/fonts/fontawesome-webfont.svg#FontAwesome') format('svg');
+          src: url('http://blockwebshop.com/css/fonts/fontawesome-webfont.eot?#iefix') format('embedded-opentype'), url('http://blockwebshop.com/css/fonts/fontawesome-webfont.woff') format('woff'), url('http://blockwebshop.com/css/fonts/fontawesome-webfont.ttf') format('truetype'), url('http://blockwebshop.com/css/fonts/fontawesome-webfont.svg#FontAwesome') format('svg');
           font-weight: normal;
           font-style: normal;
         }
@@ -2766,7 +2766,7 @@
         ul.arrow li {
           display: block;
           padding-left: 15px;
-          background: url('../img/ul-arrow.png') left 5px no-repeat;
+          background: url('http://blockwebshop.com/img/ul-arrow.png') left 5px no-repeat;
         }
         /* #Widget
         ================================================== */
@@ -2886,7 +2886,7 @@
           color: #888;
         }
         .content blockquote.icon {
-          background: url('../img/quote.png') left center no-repeat;
+          background: url('http://blockwebshop.com/img/quote.png') left center no-repeat;
           padding-left: 42px;
         }
         .content hr {
@@ -2966,7 +2966,7 @@
           display: block;
           border-bottom: 1px dotted #ccc;
           padding-left: 15px;
-          background: url('../img/ul-arrow.png') left 12px no-repeat;
+          background: url('http://blockwebshop.com/img/ul-arrow.png') left 12px no-repeat;
         }
         .sidebar .widget.menu ul li a,
         .sidebar .widget.categories ul li a {
@@ -3275,7 +3275,7 @@
           margin: 0;
           list-style: none;
           margin-bottom: 8px;
-          background: url('../img/ul-arrow.png') left 5px no-repeat;
+          background: url('http://blockwebshop.com/img/ul-arrow.png') left 5px no-repeat;
           padding-left: 15px;
         }
         footer .widget.list ul li a {
@@ -3295,7 +3295,7 @@
         }
         footer .twitter ul li {
           background-repeat: no-repeat;
-          background-image: url('../img/tweet.png');
+          background-image: url('http://blockwebshop.com/img/tweet.png');
           background-position: 0 5px;
           padding-left: 30px;
           list-style: none;
@@ -3306,7 +3306,7 @@
         }
         @media all and (-webkit-min-device-pixel-ratio: 1.5) {
           footer .twitter ul li {
-            background-image: url('../img/tweet@2x.png');
+            background-image: url('http://blockwebshop.com/img/tweet@2x.png');
             background-size: 21px 15px;
           }
         }
@@ -3318,11 +3318,11 @@
           display: block;
         }
         footer .twitter ul li.retweet {
-          background-image: url('../img/retweet.png');
+          background-image: url('http://blockwebshop.com/img/retweet.png');
         }
         @media all and (-webkit-min-device-pixel-ratio: 1.5) {
           footer .twitter ul li.retweet {
-            background-image: url('../img/retweet@2x.png');
+            background-image: url('http://blockwebshop.com/img/retweet@2x.png');
             background-size: 21px 15px;
           }
         }
@@ -3712,20 +3712,20 @@
                 {/block:Title}
                 {Body}
 
-                <p><a href="blog-single.html">Continue reading »</a></p>
+                <p><a href="{Permalink}">Continue reading »</a></p>
               </div>
             </article>
           {/block:Text}
           {block:Photo}
           <article class="post type-post format-standard clearfix">
             <div class="featured-image">
-              <a href="blog-single.html">
+            <a href="{Permalink}">
                 <img src="{PhotoURL-500}" alt="">
               </a>
             </div>
             <div class="three columns alpha meta">
               <ul>
-                <li class="clearfix type"><a href="blog-single.html"><i class="icon-file"></i></a></li>
+              <li class="clearfix type"><a href="{Permalink}"><i class="icon-file"></i></a></li>
                 <li><strong>Posted:</strong> {ShortMonth} {DayofMonth} {Year}</li>
                 <li><strong>Type:</strong> <a href="#">Image</a></li>
                 <li><strong>Comments:</strong> <a class="dsq-comment-count" href="{Permalink}#disqus_thread"></a></li>
@@ -3744,7 +3744,7 @@
           <article class="post type-post format-quote clearfix">
             <div class="three columns alpha meta">
               <ul>
-                <li class="clearfix type"><a href="blog-single.html"><i class="icon-comment-alt"></i></a></li>
+              <li class="clearfix type"><a href="{Permalink}"><i class="icon-comment-alt"></i></a></li>
                 <li><strong>Posted:</strong> {ShortMonth} {DayofMonth} {Year}</li>
                 <li><strong>Type:</strong> <a href="#">Quote</a></li>
                 <li><strong>Comments:</strong> <a class="dsq-comment-count" href="{Permalink}#disqus_thread"></a></li>
@@ -3760,7 +3760,7 @@
                 {/block:Source}
               </blockquote>
 
-              <p><a href="blog-single.html">Continue reading »</a></p>
+              <p><a href="{Permalink}">Continue reading »</a></p>
             </div>
           </article> 
           {/block:Quote}
@@ -3768,7 +3768,7 @@
           <article class="post type-post format-link clearfix">
             <div class="three columns alpha meta">
               <ul>
-                <li class="clearfix type"><a href="blog-single.html"><i class="icon-link"></i></a></li>
+              <li class="clearfix type"><a href="{Permalink}"><i class="icon-link"></i></a></li>
                 <li><strong>Posted:</strong> {ShortMonth} {DayofMonth} {Year}</li>
                 <li><strong>Type:</strong> <a href="#">Link</a></li>
                 <li><strong>Comments:</strong> <a class="dsq-comment-count" href="{Permalink}#disqus_thread"></a></li>
@@ -3792,7 +3792,7 @@
             </div>
             <div class="three columns alpha meta">
               <ul>
-                <li class="clearfix type"><a href="blog-single.html"><i class="icon-film"></i></a></li>
+              <li class="clearfix type"><a href="{Permalink}"><i class="icon-film"></i></a></li>
                 <li><strong>Posted:</strong> {ShortMonth} {DayofMonth} {Year}</li>
                 <li><strong>Type:</strong> <a href="#">Video</a></li>
                 <li><strong>Comments:</strong> <a class="dsq-comment-count" href="{Permalink}#disqus_thread"></a></li>
@@ -3827,37 +3827,40 @@
             (document.getElementsByTagName('HEAD')[0] || document.getElementsByTagName('BODY')[0]).appendChild(s);
           }());
           </script>
-          <div class="pagination">
           {block:Pagination}
-          {block:CurrentPage}
-          <span class="current">{PageNumber}</span>
-          {/block:CurrentPage}
-          {block:JumpPage}
-          <a href="{URL}">{PageNumber}</a>
-          {/block:JumpPage}
+            <div class="pagination">
+              {block:CurrentPage}
+                <span class="current">{PageNumber}</span>
+              {/block:CurrentPage}
+              {block:JumpPage}
+                <a href="{URL}">{PageNumber}</a>
+              {/block:JumpPage}
+            </div> 
           {/block:Pagination}
-          </div> 
+          {block:NoSearchResults}
+          <p>Sorry no posts matched your search.</p>
+          {/block:NoSearchResults}
+          {block:SearchPage}
+          <p>Hey there's a result</p>
+          {block:SearchPage}
         </div><!-- /eleven -->
         <aside class="five columns omega sidebar">
           <div class="widget search">
-            <form>
-              <input type="input" id="search" placeholder="Enter keyword and press enter…" name="s" results="5">
+            <form action="/search" method="get">
+            <input type="input" name="q" id="search" placeholder="Enter keyword and press enter…" name="s" results="5">
             </form>
           </div><!-- /search -->
 
           <div class="widget clearfix categories">
             <h3>Categories</h3>
             <ul>
-              <li><a href="#">Web dev</a></li>
-              <li><a href="#">Responsive</a></li>
-              <li><a href="#">Design</a></li>
-              <li><a href="#">Themes</a></li>
+              <li><a href="/tagged/web%20dev">Web dev</a></li>
             </ul>
           </div>
 
           <div class="widget text">
-            <h3>Simple text widget</h3>
-            <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu.</p>
+            <h3>Accepting Clients for October.</h3>
+            <p>Block web shop is a small web application consultancy in Orlando, Fl. <a href='mailto:hi@blockwebshop.com'>Contact us</a> to see if we might be a good fit for your next project.</p>
           </div><!-- /text -->
         </aside>
       </div><!-- sixteen columns -->
@@ -3870,12 +3873,11 @@
         <p>1219 22nd St.<br/>
         Orlando, Fl 32805<br/>
         407-413-9645<br/>
-        <a href='mailto:hi@blockwebshop.com'>hi@blockwebshop.com<a></p>
+        <a href='mailto:hi@blockwebshop.com'>hi@blockwebshop.com</a></p>
       </div>
-
       <div class="one-third column widget list">
         <h3>From the blog:</h3>
-        <ul>
+        <ul id='blog'>
           <li>No posts yet, check back soon.</li>
         </ul>
       </div>
@@ -3904,8 +3906,20 @@
   <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
   <script>window.jQuery || document.write('<script src="js/libs/jquery-1.7.1.min.js"><\/script>')</script>
 
-  <script src="js/plugins.js"></script>
-  <script src="js/script.js"></script>
+  <script src="http://blockwebshop.com/js/plugins.js"></script>
+  <script src="http://blockwebshop.com/js/script.js"></script>
+  <script type="text/javascript" src="http://blog.blockwebshop.com/api/read/json"></script>
+
+  <script type="text/javascript">
+      $(document).ready(function() {
+        if(tumblr_api_read.posts.length > 0) {
+          $('#blog').html('')
+          $.each(tumblr_api_read.posts, function(index, post) {
+            $('#blog').append('<li><a href="' + post.url + '">' + post['regular-title'] + '</a></li>');
+          });
+        }
+      });
+  </script>
 
 </body>
 </html>
