@@ -171,19 +171,18 @@
   <script type="text/javascript" src="http://blog.blockwebshop.com/api/read/json"></script>
 
   <script type="text/javascript">
-    console.lo(document)
-      $(document).ready(function(){
-        $('#layerslider').layerSlider({
-          skinsPath : 'css/layerslider/',
-          skin : 'powerful'
-        });
-        if(tumblr_api_read.posts.length > 0) {
-          $('#blog').html('')
-          $.each(tumblr_api_read.posts, function(index, post) {
-            $('#blog').append('<li><a href="' + post.url + '">' + post['regular-title'] + '</a></li>');
-          });
-        }
+    $(document).ready(function(){
+      $('#layerslider').layerSlider({
+        skinsPath : 'css/layerslider/',
+        skin : 'powerful'
       });
+      if(tumblr_api_read.posts.length > 0) {
+        $('#blog').html('')
+        $.each(tumblr_api_read.posts, function(index, post) {
+          $('#blog').append('<li><a href="' + post.url + '">' + post['regular-title'] + '</a></li>');
+        });
+      }
+    });
   </script>
 
 </body>
